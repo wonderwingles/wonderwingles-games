@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Picture Math Puzzle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f8ff;
+      padding: 20px;
+    }
+    .emoji {
+      font-size: 60px;
+      margin: 10px;
+    }
+    .question {
+      font-size: 28px;
+      margin: 20px;
+    }
+    .options button {
+      font-size: 24px;
+      margin: 10px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background: #fce4ec;
+    }
+    .options button:hover {
+      background: #ffd1dc;
+    }
+    .result {
+      font-size: 28px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🍓 Picture Math Puzzle 🍓</h2>
+  <div class="emoji" id="puzzle">🍓🍓 + 🍓</div>
+  <div class="question">How many in total?</div>
+
+  <div class="options">
+    <button onclick="checkAnswer(2)">2</button>
+    <button onclick="checkAnswer(3)">3</button>
+    <button onclick="checkAnswer(4)">4</button>
+  </div>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    const puzzles = [
+      { question: '🍓🍓 + 🍓', answer: 3 },
+      { question: '🍎🍎 + 🍎🍎', answer: 4 },
+      { question: '🐠 + 🐠🐠', answer: 3 },
+      { question: '🦋🦋🦋 + 🦋', answer: 4 },
+      {
